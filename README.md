@@ -14,6 +14,9 @@
 톰캣9 - javax.servlet
 JDK21
 
+### 웹사이트 주소
+<a href="http://swcha.iptime.org/uniplo/">[http://swcha.iptime.org/uniplo/]<br/>
+
 ### 블로그 기록
 <a href="http://codetails.tistory.com/16">[쇼핑몰 웹사이트 | 데이터 모델링(ERD 작성)]<br/>
 <a href="http://codetails.tistory.com/18">[쇼핑몰 웹사이트 | 웹페이지 구현 - 장바구니(+주문 일부)]<br/>
