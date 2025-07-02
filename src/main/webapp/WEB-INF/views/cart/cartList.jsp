@@ -36,7 +36,7 @@
         </tr>
         <c:forEach var="item" items="${cartList}">
             <tr>
-                <td><img src="${pageContext.request.contextPath}${item.image_url}"
+                <td><img src="${pageContext.request.contextPath}/resources/images/${item.image_url}"
                          alt="${item.item_id}" class="cart-item-img" width="80" height="80"/>
                 </td>
                 <td>${item.item_name}</td>

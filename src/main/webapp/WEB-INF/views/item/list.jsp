@@ -16,7 +16,7 @@
     <c:forEach var="item" items="${items}">
       <a href="${pageContext.request.contextPath}/item/detail?item_id=${item.item_id}">
         <div class="product-card">
-          <img src="${pageContext.request.contextPath}${item.image_url}" alt="${item.item_name}" />
+          <img src="${pageContext.request.contextPath}/resources/images/${item.image_url}" alt="${item.item_name}" />
           <!--src="${pageContext.request.contextPath}/resources/images/${item.image_url} 이렇게 되어있는 거 위에 코드로 수정함 by서원-->
           <div class="product-name">${item.item_name}</div>
           <div class="product-price">₩${item.item_price}</div>

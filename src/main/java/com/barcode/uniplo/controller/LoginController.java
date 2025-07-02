@@ -1,24 +1,19 @@
 package com.barcode.uniplo.controller;
 
-import com.barcode.uniplo.domain.CartDto;
 import com.barcode.uniplo.domain.UserDto;
-import com.barcode.uniplo.service.CartService;
 import com.barcode.uniplo.service.LoginService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/login")
 public class LoginController {
+
     @Autowired
     private LoginService loginService;
-
 
     @GetMapping("/login")
     public String showLoginForm() {
@@ -26,20 +21,26 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("user_email") String email, @RequestParam("user_password") String password, HttpServletRequest request) {
+    public String login(@RequestParam("user_email") String email,
+                        @RequestParam("user_password") String password,
+                        HttpServletRequest request) {
+
         UserDto userDto = loginService.login(email, password);
-        if(userDto != null) {
-            HttpSession session = request.getSession();
+        if (userDto != null) {
+            HttpSession session = request.getSession(true);
             session.setAttribute("authUser", userDto);
             return "redirect:/";
         }
 
+        // 로그인 실패 시 다시 로그인 폼으로 이동 (필요하면 메시지 추가 가능)
         return "login/login";
     }
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
-        session.invalidate();
+        if (session != null) {
+            session.invalidate();
+        }
         return "redirect:/";
     }
 }

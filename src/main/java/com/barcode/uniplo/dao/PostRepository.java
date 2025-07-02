@@ -2,7 +2,6 @@ package com.barcode.uniplo.dao;
 
 import com.barcode.uniplo.domain.PostDto;
 import com.barcode.uniplo.domain.SearchCondition;
-import io.micrometer.observation.annotation.Observed;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

@@ -47,7 +47,7 @@
   <div class="product-detail">
 
     <!-- 상품 이미지 -->
-    <img src="${pageContext.request.contextPath}${item.image_url}"
+    <img src="${pageContext.request.contextPath}/resources/images/${item.image_url}"
     <!--src="${pageContext.request.contextPath}/resources/images/${item.image_url} 이렇게 되어있는 거 위에 코드로 수정함 by서원-->
          alt="${item.item_name}"/>
 
