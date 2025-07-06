@@ -11,8 +11,8 @@
 데이터모델링, Spring 등 학습한 내용을 실제 웹사이트를 제작하며 적용해본다.<br/>
 
 ### 기술스택
-톰캣9 - javax.servlet
-JDK21
+● 백엔드 프레임워크: Spring5 (Tomcat 9 / javax.servlet 기반)
+● JDK 버전: JDK 21
 
 ### 웹사이트 바로가기
 <a href="http://swcha.iptime.org/uniplo/">http://swcha.iptime.org/uniplo/<br/>
