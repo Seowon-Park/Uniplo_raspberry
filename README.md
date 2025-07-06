@@ -11,7 +11,7 @@
 데이터모델링, Spring 등 학습한 내용을 실제 웹사이트를 제작하며 적용해본다.<br/>
 
 ### 기술스택
-● 백엔드 프레임워크: Spring5 (Tomcat 9 / javax.servlet 기반)
+● 백엔드 프레임워크: Spring5 (Tomcat 9 / javax.servlet 기반)<br/>
 ● JDK 버전: JDK 21
 
 ### 웹사이트 바로가기
